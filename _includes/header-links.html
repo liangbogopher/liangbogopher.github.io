@@ -1,18 +1,21 @@
 <ul>
 	<li>
-		<a href="{{ '/archive' | prepend: site.baseurl | prepend: site.url }}">归档</a><span>/</span>
+		<a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">首页</a>
 	</li>
 	<li>
-		<a href="{{ '/categories' | prepend: site.baseurl | prepend: site.url }}">分类</a><span>/</span>
+		<a href="{{ '/archive' | prepend: site.baseurl | prepend: site.url }}">归档</a><span></span>
 	</li>
 	<li>
-		<a href="{{ '/tags' | prepend: site.baseurl | prepend: site.url }}">标签</a><span>/</span>
+		<a href="{{ '/categories' | prepend: site.baseurl | prepend: site.url }}">分类</a><span></span>
 	</li>
 	<li>
-		<a href="{{ '/search' | prepend: site.baseurl | prepend: site.url }}">搜索</a><span>/</span>
+		<a href="{{ '/tags' | prepend: site.baseurl | prepend: site.url }}">标签</a><span></span>
 	</li>
 	<li>
-		<a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}">关于</a><span>/</span>
+		<a href="{{ '/search' | prepend: site.baseurl | prepend: site.url }}">搜索</a><span></span>
+	</li>
+	<li>
+		<a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}">关于</a><span></span>
 	</li>
 
 	<!-- {% if site.harmony.social.github %}
