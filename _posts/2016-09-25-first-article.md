@@ -1,7 +1,8 @@
 ---
 layout: post
+keywords: 博客
 title: 博客终于正式开张啦～
-date: 2016-09-25 20:53:54
+date: 2016-09-25
 categories: 我的日志
 ---
 
