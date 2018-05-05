@@ -9,7 +9,7 @@ tags: Concurrency
 
 关于java线程池中的 allowCoreThreadTimeOut 和 Guava Futures的使用。
 
-之前写过一篇关于java线程池的文章：[Java线程池和队列](/2016/12/20/java-thread-pool/)
+之前写过一篇关于java线程池的文章：[Java线程池和队列](/2016/12/20/java-thread-pool)
 
 ### 要做异步任务执行队列，有个如下需求：
 
