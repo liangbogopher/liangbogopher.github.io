@@ -16,7 +16,7 @@ tags: Git
 brew install git
 ```
 
-如何免密登陆Git，可以参考本人的一篇文章：[Git生成多个SSH Key](/2017/01/07/git-ssh-key/)
+如何免密登陆Git，可以参考本人的一篇文章：[Git生成多个SSH Key](/2017/01/07/git-ssh-key)
 
 ### 初始化一个Git仓库
 
