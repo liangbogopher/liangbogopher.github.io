@@ -1,4 +1,4 @@
 # robots.txt  
 User-agent: *
 Disallow: 
-Sitemap: http://kuanghy.github.io/sitemap.xml
+Sitemap: https://liangbogopher.github.io/sitemap.xml
