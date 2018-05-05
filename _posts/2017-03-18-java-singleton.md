@@ -4,7 +4,7 @@ keywords: Java 设计模式
 title: 单例模式总结
 date: 2017-03-18
 categories: Java
-tags: Design Patterns
+tags: 设计模式
 ---
 
 单例模式 (Singleton) 也叫单态模式，是设计模式中最为简单的一种模式。

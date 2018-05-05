@@ -4,7 +4,7 @@ keywords: Java 动态代理
 title: 说说jdk代理以及cglib动态代理
 date: 2017-03-26
 categories: Java
-tags: Dynamic Proxy
+tags: 动态代理
 ---
 
 代理实现可以分为静态代理和动态代理, 下面使用jdk和cglib来分别说明。
