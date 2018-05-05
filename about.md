@@ -29,7 +29,6 @@ permalink: /about/
 
 - **QQ：** 908325713
 - **微信：** amugulove
-- **微博：** [http://weibo.com/lovelizy2011](http://weibo.com/lovelizy2011)
 - **邮箱：** <a herf="mailto:liangbogopher87@gmail.com">liangbogopher87@gmail.com</a>
 
 <h3>个人站</h3>
