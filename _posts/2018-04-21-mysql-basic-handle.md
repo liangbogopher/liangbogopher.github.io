@@ -13,7 +13,7 @@ tags:
 如何安装 `MySQL` 可以查看我之前的文章，这里不再赘述。
 
 ```
-service mysql start
+service mysqld start
 或
 systemctl start mysqld
 ```
@@ -147,6 +147,48 @@ ALTER TABLE table_name DROP UNIQUE index_name
 
 ALTER TABLE table_name DROP PRIMARY KEY
 ```
+
+### 数据导出
+
+**导出Excel**
+
+方案一：
+
+```
+mysql -uroot -ppassword -hxxx -e "query statement" db > ./xxx.xls
+```
+
+方案二：
+
+```
+select * from table into outfile 'xxx.xls'; 
+```
+
+**Dump数据**
+
+导出所有数据库：
+
+```
+mysqldump -uroot -ppassword --all-databases >/tmp/all.sql
+```
+
+导出db1，db2所有的数据：
+
+```
+mysqldump -uroot -ppassword --databases db1 db2 >/tmp/all.sql
+```
+
+导出db1中的a1、a2表：
+
+```
+mysqldump -uroot -ppassword --databases db1 --tables a1 a2  >/tmp/all.sql
+```
+
+a) 加入`--no-data`，只导出表结构，不导出数据
+
+b) 加入`--master-data`, 记录bin log的文件名和位置，其中有两个配置`--master-data=1`和`--master-data=2`。  
+=1时，直接导入备份文件，start slave不需要指定file和position    
+=2时，file和position是被注释掉的，需要手动指定file和position
 
 ### 一个实用的 shell 脚本：
 
