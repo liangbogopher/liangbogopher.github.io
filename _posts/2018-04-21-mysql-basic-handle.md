@@ -2,7 +2,7 @@
 layout: post
 keywords: MySQL SQL
 title: MySQL 数据库基本 SQL 操作
-date: 2018-04-21
+date: 2018-04-21 18:00
 categories: 数据库
 tags:
     - MySQL
