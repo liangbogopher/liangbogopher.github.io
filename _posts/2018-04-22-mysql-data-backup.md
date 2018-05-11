@@ -30,7 +30,7 @@ MySQL数据备用有很多种方式，这里只重点讲下mysqldump的用法。
 
 - `--master-data`
 
-这个选项可以把`binlog`的位置和文件名添加到输出中，如果等于1，将会打印成一个`CHANGE MASTER`命令；如果等于2，会加上注释前缀。并且这个选项会自动打开`--lock-all-tables`，除非同时设置了`--single-transaction`（这种情况下，全局读锁只会在开始dump的时候加上一小段时间，不要忘了阅读`--single-transaction`的部分）。在任何情况下，所有日志中的操作都会发生在导出的准确时刻。这个选项会自动关闭`--lock-tables`。
+这个选项可以把 binlog 的位置和文件名添加到输出中，如果等于1，将会打印成一个 CHANGE MASTER 命令；如果等于2，会加上注释前缀。并且这个选项会自动打开`--lock-all-tables`，除非同时设置了`--single-transaction`（这种情况下，全局读锁只会在开始dump的时候加上一小段时间，不要忘了阅读`--single-transaction`的部分）。在任何情况下，所有日志中的操作都会发生在导出的准确时刻。这个选项会自动关闭`--lock-tables`。
 
 - `-x, --lock-all-tables`
 
@@ -38,7 +38,7 @@ MySQL数据备用有很多种方式，这里只重点讲下mysqldump的用法。
 
 - `--single-transaction`
 
-通过将导出操作封装在一个事务内来使得导出的数据是一个一致性快照。只有当表使用支持`MVCC`的存储引擎（目前只有`InnoDB`）时才可以工作；其他引擎不能保证导出是一致的。当导出开启了`--single-transaction`选项时，要确保导出文件有效（正确的表数据和二进制日志位置），就要保证没有其他连接会执行如下语句：`ALTER TABLE`, `DROP TABLE`, `RENAME TABLE`, `TRUNCATE TABLE`，这会导致一致性快照失效。这个选项开启后会自动关闭`--lock-tables`。
+通过将导出操作封装在一个事务内来使得导出的数据是一个一致性快照。只有当表使用支持 MVCC 的存储引擎（目前只有`InnoDB`）时才可以工作；其他引擎不能保证导出是一致的。当导出开启了`--single-transaction`选项时，要确保导出文件有效（正确的表数据和二进制日志位置），就要保证没有其他连接会执行如下语句： ALTER TABLE ,  DROP TABLE, RENAME TABLE, TRUNCATE TABLE，这会导致一致性快照失效。这个选项开启后会自动关闭`--lock-tables`。
 
 - `-l, --lock-tables`
 
@@ -73,6 +73,7 @@ MySQL数据备用有很多种方式，这里只重点讲下mysqldump的用法。
 在每个表导出之前增加`LOCK TABLES`并且之后`UNLOCK TABLE`。(为了使得更快地插入到MySQL)。默认开启。
 
 - `--create-option`
+
 在`CREATE TABLE`语句中包括所有MySQL表选项。默认开启，使用`--skip-create-options`来关闭。
 
 - `-e, --extended-insert`
